@@ -1,4 +1,10 @@
-import { HomePage, AboutPage, WorkPage, ContactPage } from "../pages";
+import {
+  HomePage,
+  AboutPage,
+  WorkPage,
+  ContactPage,
+  ErrorBoundary,
+} from "../pages";
 
 const mainRoutes = [
   {
@@ -16,6 +22,10 @@ const mainRoutes = [
   {
     path: "/contact",
     element: <ContactPage />,
+  },
+  {
+    path: "*",
+    element: <ErrorBoundary />,
   },
 ];
 

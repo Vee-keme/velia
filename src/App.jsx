@@ -4,6 +4,7 @@ import Layout from "./layout/Layout";
 import { useLocation } from "react-router-dom";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import mainRoutes from "./routes/mainRoutes";
+import ErrorBoundary from "./pages/ErrorBoundary";
 
 function App() {
   // const location = useLocation();
@@ -21,6 +22,7 @@ function App() {
       path: "/",
       element: <Layout />,
       children: mainRoutes,
+      error: <ErrorBoundary />,
     },
   ]);
 
