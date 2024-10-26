@@ -19,10 +19,10 @@ const Navbar = () => {
 
   return (
     <nav className="w-11/12 mx-auto h-16">
-      <div className="Navbar w-full flex justify-between items-center">
+      <div className="Navbar w-full flex justify-between items-center py-2">
         <div className="Navbar-title">
-          <div className="nav-word">
-            V{" "}
+          <div className="nav-word h-8 text-4xl">
+            V
             <span className="line">
               {/* {word ? `${word}` : "null"} */}
               elia
@@ -31,7 +31,11 @@ const Navbar = () => {
         </div>
 
         <div className="Navbar-menu" onClick={toggle}>
-          {isOpen ? <FaCross className="" /> : <FaBars className="" />}
+          {isOpen ? (
+            <FaCross className="w-8 h-8" />
+          ) : (
+            <FaBars className="w-8 h-8" />
+          )}
         </div>
       </div>
     </nav>
